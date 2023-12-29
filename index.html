@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>VAST MC2 2018 VA Spring 2023 Team</title>
+<link rel="stylesheet" type="text/css" href="./inspector.css">
+<body>
+    <script>
+        const style = document.createElement('style');
+        style.innerHTML = `
+          .rotate {
+            animation: rotate 150s ease-in-out infinite;
+          }
+    
+          @keyframes rotate {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+
+//             .anti_rotate {
+//   animation: rotate-anti-clockwise 150s ease-in-out infinite;
+// }
+
+// @keyframes rotate-anti-clockwise {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(-360deg);
+//   }
+// }
+
+//             0% {
+//     transform: rotateY(0deg);
+//   }
+//   100% {
+//     transform: rotateY(360deg);
+//   }
+//           }
+        `;
+        document.head.appendChild(style);
+      </script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+<script type="module">
+
+import define from "./index.js";
+import {Runtime, Library, Inspector} from "./runtime.js";
+
+const runtime = new Runtime();
+const main = runtime.module(define, Inspector.into(document.body));
+
+</script>
+
+
+<!-- <script>
+      var radialChart = d3.select("svg g g g g")
+      function rotate() {
+        radialChart
+          .transition()
+          .duration(1000)  // 5000 milliseconds = 5 seconds
+          .attr("transform", "rotate(360)")  // rotate the circle 360 degrees
+          .on("end", rotate);  // call the rotate function again after the animation ends
+      }
+
+      // Call the rotate function to start the animation
+      rotate();
+</script> -->
+
+</body>
+
+
+
+

@@ -1,0 +1,14 @@
+{
+  "name": "@d3/radial-stacked-bar-chart",
+  "main": "d43fa2a122cc9fbf@163.js",
+  "version": "163.0.0",
+  "homepage": "https://observablehq.com/@d3/radial-stacked-bar-chart",
+  "author": {
+    "name": "D3",
+    "url": "https://observablehq.com/@d3"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
