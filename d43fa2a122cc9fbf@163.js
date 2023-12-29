@@ -107,22 +107,7 @@ function _chart(d3,DOM,width,height,data,z,arc,xAxis,yAxis,legend)
       .call(legend)
      ;
 
-     function downloadSVG() {
-      const svgString = new XMLSerializer().serializeToString(svg.node());
-      const blob = new Blob([svgString], { type: 'image/svg+xml' });
-      const url = URL.createObjectURL(blob);
-  
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'chart.svg';
-      a.click();
-  
-      URL.revokeObjectURL(url);
-    }
-  
-    // Adding a button to trigger SVG download
-    downloadSVG()
-    
+     
 
   return svg.node();
 }
